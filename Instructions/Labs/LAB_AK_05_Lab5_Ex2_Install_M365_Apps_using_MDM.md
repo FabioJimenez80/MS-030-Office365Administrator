@@ -71,7 +71,7 @@ Holly wants to add Microsoft 365 apps automatically to managed devices. To manag
 
 14. In the **App suite information** page, confirm the default values and select **Next**.
 
-15. In the **Configure app suite** page, beside **Select Office apps**, select the drop-down. Confirm, that all apps are selected, except **OneDrive (Groove)**. Select the drop-down again to close it.
+15. In the **Configure app suite** page, beside **Select Office apps**, select the drop-down. Confirm, that all apps are selected, except **Skype for business**. Select the drop-down again to close it.
 
 16. Beside **Select other Office apps (license required)**, select the drop-down, select **Project Online Desktop client** and **Visio Online Plan 2**, and select the drop-down again to close it.
 
