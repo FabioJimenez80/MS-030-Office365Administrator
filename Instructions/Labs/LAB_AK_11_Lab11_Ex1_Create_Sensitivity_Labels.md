@@ -262,7 +262,7 @@ Holly has decided to test creating sensitivity label policies using both the Mic
 
 9. On the **Apply a default label to Power BI content** page, select **Next**.
 
-10. On the **Name your policy** page, enter **Classified Policy** in the **Name** field and enter **This policy is used for sensitive information in Government contracts only**. Select **Next**.
+10. On the **Name your policy** page, enter **Classified Policy** in the **Name** field and enter **This policy is used for sensitive information in Government contracts only** in the description Field. Select **Next**.
 
 11. On the **Review and finish** page, review the entries that you made. If any need to be corrected, select the corresponding **Edit** option and make the necessary changes. When all settings are correct, select **Submit**.
 
