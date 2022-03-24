@@ -4,7 +4,7 @@ Adatum has transitioned to Microsoft 365 as its enterprise cloud solution. The c
 
 In your role as Holly Dickson, Adatum’s Enterprise Administrator, the company CTO has requested that you devise a solution for encrypting and securing messages when working in these related contracts. He has also requested that any references to “Project New Day” be automatically encrypted. This is a top-secret project, and it is imperative that no mention of this project be leaked outside the company.
 
-In this lab, you will address your CTO's request by creating sensitivity labels that will be used for creating label policies. You will create sensitivity labels using the Microsoft 365 Security center as well as Windows PowerShell. While still satisfying your CTO's request, this plan will provide you with experience using each method as part of your pilot project. This way, you can later decide which approach you prefer when you transition from your pilot phase to the production phase. With your labels in place, you will then create a label policy - again, using both the Security center and PowerShell. 
+In this lab, you will address your CTO's request by creating sensitivity labels that will be used for creating label policies. You will create sensitivity labels using the Microsoft 365 Compliance center as well as Windows PowerShell. While still satisfying your CTO's request, this plan will provide you with experience using each method as part of your pilot project. This way, you can later decide which approach you prefer when you transition from your pilot phase to the production phase. With your labels in place, you will then create a label policy - again, using both the Compliance center and PowerShell. 
 
 **Important:** Sensitivity labels and policies can take up to 24 hours to propagate through the system and update the back-end servers. Unfortunately, with this training course nearing its end, you will not have time to verify your work by testing the labels and policies you created. However, it is hoped that this lab exercise will still provide you with experience and insight into the mechanics of creating sensitivity labels and policies, even though you cannot test them.
 
@@ -62,9 +62,9 @@ In your role as Holly Dickson, you will create a new Microsoft 365 group titled 
 24. Leave your Edge browser and all its tabs open and proceed to the next task.
 
 
-### Task 2 - Creating Sensitivity Labels using the Security and Compliance Center
+### Task 2 - Creating Sensitivity Labels using the Compliance Center
 
-Holly has decided to test creating sensitivity labels using both the Microsoft 365 Security and Compliance Center and Windows PowerShell. In this task you will use the Security and Compliance Center for this portion of your test.
+Holly has decided to test creating sensitivity labels using both the Microsoft 365 Compliance Center and Windows PowerShell. In this task you will use the Compliance Center for this portion of your test.
 
  
 1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
@@ -73,11 +73,11 @@ Holly has decided to test creating sensitivity labels using both the Microsoft 3
 
 	Select the **Microsoft 365 admin center** tab.
 
-3.	In the **Microsoft 365 admin center**, select **Show all** in the left navigation pane and then under **Admin centers**, select **Security**.
+3.	In the **Microsoft 365 admin center**, select **Show all** in the left navigation pane and then under **Admin centers**, select **Compliance**.
 
-4.	In the **Office 365 Security and Compliance** center, in the left-hand navigation pane, select **Classification**, and then select **Sensitivity labels**.
+4.	In the **Microsoft 365 Compliance** center, in the left-hand navigation pane, select **Information protection**.
 
-5.	On the **Sensitivity** page, the **Labels** tab is displayed by default. On the menu bar above the list of labels, select **Create a label**. This initiates a wizard to create a new sensitivity label.
+5.	On the **Information protection** page, select the **Labels** tab. On the menu bar above the list of labels, select **Create a label**. This initiates a wizard to create a new sensitivity label.
 
 6.	In the **New sensitivity label** wizard, on the **Name and create a tooltip for your label** page, enter **Classified** in the **Name** and **Display name** fields, and enter **For Official Use Only** in the **Description for Users** field. Select **Next**.
 
@@ -120,7 +120,7 @@ Holly has decided to test creating sensitivity labels using both the Microsoft 3
 
 18. On the **Define protection settings for groups and sites**, select **Next**. 
 
-19. On the **Auto-labeling for database columns** page, select **Next**.
+19. On the **Auto-labeling for schematized data assets** page, select **Next**.
 
 20.	On the **Review your settings** page, review the entries that you made. If any need to be corrected, select the corresponding **Edit** option and make the necessary changes. When all settings are correct, select **Create label**.
 
@@ -131,7 +131,7 @@ Holly has decided to test creating sensitivity labels using both the Microsoft 3
 
 ### Task 3 - Creating Sensitivity Labels using Windows PowerShell
 
-Holly has decided to test creating sensitivity labels using both the Security and Compliance Center and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.
+Holly has decided to test creating sensitivity labels using both the Compliance Center and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.
 
 **Note:** What Holly will learn from this task is that due to a current limitation, only the basic parameters for a sensitivity label can be updated in PowerShell at this time. The remaining parameters will have to be entered using the Security and Compliance Center.
 
@@ -174,11 +174,11 @@ Holly has decided to test creating sensitivity labels using both the Security an
 
 		Set-Label -Identity Secret -Comment "For use with Government contracts ONLY"
 
-10.	On the taskbar, select the Edge browser icon, and then select the **Security and Compliance** tab. You should still be in the **sensitivity** page and it should be displaying the **Labels** tab for this page. 
+10.	On the taskbar, select the Edge browser icon, and then select the **Compliance** tab. You should still be in the **Information protection** page and it should be displaying the **Labels** tab for this page. 
 
 11. In the list of labels, the **Classified** label that you created earlier should be displayed. Select **Refresh** on the menu bar above the list of labels.
 
-12.	In the list of labels, you should now see the **Classified** label that you created using the Security and Compliance Center and the **Secret** label that you created using Windows PowerShell. 
+12.	In the list of labels, you should now see the **Classified** label that you created using the Compliance Center and the **Secret** label that you created using Windows PowerShell. 
 
 	Select the **Secret** label.
 
@@ -227,7 +227,7 @@ Holly has decided to test creating sensitivity labels using both the Security an
 
 26. On the **Define protection settings for groups and sites**, select **Next**. 
 
-27. On the **Auto-labeling for database columns** page, select **Next**.
+27. On the **Auto-labeling for schematized data assets** page, select **Next**.
 
 28. On the **Review your settings** page, review the entries that you made. If any need to be corrected, select the corresponding **Edit** option and make the necessary changes. When all settings are correct, select **Save label**.
 
@@ -236,11 +236,11 @@ Holly has decided to test creating sensitivity labels using both the Security an
 30. Leave your Edge browser and all its tabs open and proceed to the next task.
 
 	
-### Task 4 - Creating Sensitivity Label Policies using the Security and Compliance Center
+### Task 4 - Creating Sensitivity Label Policies using the Compliance Center
 
-Holly has decided to test creating sensitivity label policies using both the Microsoft 365 Security and Compliance Center and Windows PowerShell. In this task you will use the Security and Compliance Center for this portion of your test.
+Holly has decided to test creating sensitivity label policies using both the Microsoft 365 Compliance Center and Windows PowerShell. In this task you will use the Compliance Center for this portion of your test.
 
-1. On **LON-CL1** you should still be in the **Security and Compliance** tab, which should be displaying the **sensitivity** page. You are currently displaying the **Labels** tab for this page. 
+1. On **LON-CL1** you should still be in the **Compliance** tab, which should be displaying the **Information Protection** page. You are currently displaying the **Labels** tab for this page. 
 
 	In the list of tabs across the top of the page, select **Label policies**.
 
@@ -254,13 +254,15 @@ Holly has decided to test creating sensitivity label policies using both the Mic
 
 6. On the **Publish to users and groups** page, you will define the users and groups to which this published label will be made available. Note that the **Users and groups** is set by default to **All**, which will include all users and groups in the organization. Select **Next**.
 
-7. On the **Policy Settings** page, leave the current selection of **None** and select **Next**.
+7. On the **Policy Settings** page, leave the every checkbox unchecked and select **Next**.
 
 8. On the **Apply a default label to documents** page, select **Next**.
 
 9. On the **Apply a default label to emails** page, select **Next**.
 
-10. On the **Name your policy** page, enter **Classified Policy** in the **Name** field and enter **This policy is used for sensitive information in Government contracts only**. Select **Next**.
+9. On the **Apply a default label to Power BI content** page, select **Next**.
+
+10. On the **Name your policy** page, enter **Classified Policy** in the **Name** field and enter **This policy is used for sensitive information in Government contracts only** in the description Field. Select **Next**.
 
 11. On the **Review and finish** page, review the entries that you made. If any need to be corrected, select the corresponding **Edit** option and make the necessary changes. When all settings are correct, select **Submit**.
 
@@ -271,9 +273,9 @@ Holly has decided to test creating sensitivity label policies using both the Mic
 
 ### Task 5 - Creating Sensitivity Label Policies using Windows PowerShell
 
-Holly has decided to test creating sensitivity label policies using both the Security and Compliance Center and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.
+Holly has decided to test creating sensitivity label policies using both the Compliance Center and Windows PowerShell. In this task you will use Windows PowerShell for this portion of your test.
 
-**Note:** What Holly will learn from this task is that due to a current limitation, only the basic parameters for a sensitivity label can be updated in PowerShell at this time. The remaining parameters will have to be entered using the Security and Compliance Center.
+**Note:** What Holly will learn from this task is that due to a current limitation, only the basic parameters for a sensitivity label can be updated in PowerShell at this time. The remaining parameters will have to be entered using the Compliance Center.
 
  
 1. On **LON-CL1**, you should still be logged in as the **Administrator** with a password of **Pa55w.rd**.
@@ -301,11 +303,11 @@ Holly has decided to test creating sensitivity label policies using both the Sec
 
 		Set-LabelPolicy -Identity "Secret policy" -AdvancedSettings @{DisableMandatoryInOutlook="True"}
 
-5. On the taskbar, select the Edge browser icon, and then select the **Security and Compliance** tab. You should still be in the **sensitivity** page and it should be displaying the **Labels** tab for this page. In the list of tabs, select **Label policies**.
+5. On the taskbar, select the Edge browser icon, and then select the **Compliance** tab. You should still be in the **Information protection** page and it should be displaying the **Label polixcies** tab for this page.
 
 	In the list of label policies, the **Classified** label that you created earlier should be displayed. Select **Refresh** on the menu bar above the list of labels.
 
-6. In the list of label policies, you should now see the **Classified policy** that you created using the Security and Compliance Center and the **Secret policy** that you created using Windows PowerShell. 
+6. In the list of label policies, you should now see the **Classified policy** that you created using the Compliance Center and the **Secret policy** that you created using Windows PowerShell. 
 
 7. Close Windows PowerShell.
 
